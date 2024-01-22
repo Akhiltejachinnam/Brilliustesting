@@ -3,9 +3,11 @@ package Base;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -37,14 +39,20 @@ public class BaseTest {
 		  if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			  
 			  WebDriverManager.chromedriver().setup();
-			  driver = new ChromeDriver();
+			  ChromeOptions options = new ChromeOptions();
+			  options.addArguments("--use-fake-ui-for-media-stream=1");
+			  driver = new ChromeDriver(options);
 			  driver.get(prop.getProperty("testurl"));
+			  driver.manage().window().maximize();
+			  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		  }
 		  else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			  
 			  WebDriverManager.firefoxdriver().setup();
 			  driver = new FirefoxDriver();
 			  driver.get(prop.getProperty("testurl"));
+			  driver.manage().window().maximize();
+			  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		  }
 			  
 		
