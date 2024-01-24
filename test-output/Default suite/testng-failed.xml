@@ -5,9 +5,12 @@
     <classes>
       <class name="Testcases.Brilliustest">
         <methods>
-          <include name="UserLoginTest"/>
+          <include name="Admincreatnewuser"/>
+          <include name="UservideopracticeTest"/>
           <include name="tearDown"/>
+          <include name="EmptyfieldsLoginTest"/>
           <include name="setUp"/>
+          <include name="UservideoassessmentTest"/>
         </methods>
       </class> <!-- Testcases.Brilliustest -->
     </classes>
