@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
+			<version>5.14.5</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
@@ -83,11 +83,19 @@
     <artifactId>javax.mail</artifactId>
     <version>1.6.2</version> <!-- Use the latest version available -->
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+<dependency>
+    <groupId>com.beust</groupId>
+    <artifactId>jcommander</artifactId>
+    <version>1.82</version>
+</dependency>
+
 		<dependency>
-			<groupId>Akhil</groupId>
-			<artifactId>Akhil</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+        <groupId>Akhil</groupId>
+        <artifactId>Akhil</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+		
 	</dependencies>
 	<build>
         <plugins>
@@ -103,5 +111,11 @@
             </plugin>
         </plugins>
     </build>
-	
+     <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
+
 </project>
