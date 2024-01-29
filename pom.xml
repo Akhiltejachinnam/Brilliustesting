@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>5.14.5</version>
+			<version>7.4.0</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
@@ -82,40 +82,27 @@
     <groupId>com.sun.mail</groupId>
     <artifactId>javax.mail</artifactId>
     <version>1.6.2</version> <!-- Use the latest version available -->
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
-<dependency>
-    <groupId>com.beust</groupId>
-    <artifactId>jcommander</artifactId>
-    <version>1.82</version>
-</dependency>
-
-		<dependency>
-        <groupId>Akhil</groupId>
-        <artifactId>Akhil</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-		
+        </dependency>
+     <!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+        <dependency>
+         <groupId>com.beust</groupId>
+         <artifactId>jcommander</artifactId>
+          <version>1.82</version>
+          </dependency>        	
 	</dependencies>
-	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+	  <build>
+          <plugins>
+              <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-surefire-plugin</artifactId>
+           <version>3.0.0-M5</version>
+           <configuration>
+           <suiteXmlFiles>
+           <suiteXmlFile>testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+               </configuration>
             </plugin>
-        </plugins>
+           </plugins>
     </build>
-     <repositories>
-    <repository>
-        <id>central</id>
-        <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
-</repositories>
-
+    
 </project>
